@@ -8,6 +8,7 @@
 
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #f5f4fa;
+  --color-bg-grey: #c4c4c4;
   --color-bg-dark: #2f303a;
 
   --color-line-first: #ececec;
@@ -175,15 +176,27 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
 
   color: var(--color-secondary);
 }
 
+.auth-nav .icon {
+  fill: var(--color-secondary);
+}
+
+.auth-nav .link:hover .icon,
+.auth-nav .link:focus .icon{
+  fill: var(--color-accent);
+}
+
 .auth-nav .link:hover,
-.auth-nav .link:focus {
+.auth-nav .link:focus,
+.auth-nav .link:hover .icon,
+.auth-nav .link:focus .icon {
   color: var(--color-accent);
 }
 
@@ -280,7 +293,19 @@ body {
 /* Hero */
 
 .hero {
-  background-color: var(--color-bg-dark);
+  background: var(--color-bg-grey);
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-content {
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -310,6 +335,16 @@ body {
 
 .features-list .item {
   flex-basis: calc((100% - (30px * 3)) / 4);
+}
+
+.features .icon-wrap {
+  background-color: var(--color-bg-secondary);
+  height: 120px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .features .title {
