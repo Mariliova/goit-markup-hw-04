@@ -13,6 +13,8 @@
 
   --color-line-first: #ececec;
   --color-line-second: #eeeeee;
+
+  --color-fill-icons-team: #afb1b8;
 }
 
 /* Typography */
@@ -407,7 +409,7 @@ body {
 .team .text {
   text-align: center;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 
   color: var(--color-secondary);
 }
@@ -420,6 +422,35 @@ body {
 .team .card-content {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.team .card-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.team .card-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.team .card-link:hover,
+.team .card-link:focus {
+ background-color: var(--color-accent);
+}
+
+.card-icon {
+  fill: var(--color-fill-icons-team);
+}
+
+.team .card-link:hover .card-icon,
+.team .card-link:focus .card-icon{
+  fill: var(--color-white);
 }
 
 /* Portfolio */
