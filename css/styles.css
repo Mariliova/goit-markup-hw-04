@@ -105,6 +105,9 @@ body {
 
 .page-header .logo-link {
   color: var(--color-black);
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .logo-accent {
