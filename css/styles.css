@@ -186,6 +186,7 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
+  gap: 10px;
 
   color: var(--color-secondary);
 }
